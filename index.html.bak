@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Company site</title>
+    <link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto:wght@300&family=Source+Code+Pro&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./book.html">Купить</a></li>
+                <li><a href="./my.html">О нас</a></li>
+                
+                <li><a href="./register.html">Войти</a></li>
+                <li class="f"><a class="logo" href="/index.html">Закажикнигу.РФ</a></li>
+
+            </ul>
+
+        </nav>
+        <div class="siteblock">
+            <h1 class="zz1">Привет, дорогой читатель!</h1>
+            <h3>Я вижу ты очень хочешь
+                купить наши книги,</h3>
+            <p class="pon">мы можем помочь тебе!</p>
+            <h4>Скорее кликай по кнопке!</h4>
+            <button style="width:200px;height:30px;"><a href="/register.html">Войти</a></button>
+        </div>
+        <div class="siteblock">
+            <h3>Мы уже много лет </h3>
+            <h3>работаем над улучшением сайта</h3>
+            <h3>внеси свой вклад!</h3>
+            <label for="">Пожелание</label> <br>
+                <input type="text"> <br>
+            <button class="send">Отправить</button>
+            <h3 class="sended">Отправил!</h3>
+        </div>
+        <div class="siteblock">
+            <h1>ПРОМОКОДЫ</h1>
+            <p>Промокод - 20% SALE</p>
+            <p>Промокод - 10% W1nCSSS</p>
+            <p>Промокод - ПРИ ПЕРВОМ ЗАКАЗЕ (БЕСПЛАТНО КНИГУ) FREEBOOK</p>
+        </div>
+		<div class="siteblock">
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="label">Дней</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="label">Часов</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="label">Минут</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="label">Секунд</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            const countdown = document.querySelector('.countdown');
+            const targetDate = new Date('2024-11-12T00:00:00');
+
+            function updateCountdown() {
+                const now = new Date();
+                const remainingTime = targetDate - now;
+
+                const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            }
+
+            // Обновляем счетчик каждую секунду
+            setInterval(updateCountdown, 1000);
+        </script>
+
+        <h1 class="zz">КУПИТЬ КНИГУ</h1>
+        
+
+    
+        <div class="shopping" style="width:150px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+            <h2 class="shoptext"> Пособие по юмору</h2>
+            <p class="shopptext">Стоит - 999 руб.</p>
+            <p class="shopptext">Рекомендуется: Тем кто без юмора</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+            <h2 class="shoptext"> Пособие для идиотов</h2>
+            <p class="shopptext">Стоит - 888 руб.</p>
+            <p class="shopptext">Рекомендуется: Тем кто без мозга</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+
+            <h2 class="shoptext"> Пособие для всех</h2>
+            <p class="shopptext">Стоит - 1999 руб (ТРЕНД!).</p>
+            <p class="shopptext">Рекомендуется: Всем</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+
+            <h2 class="shoptext"> Учебник по роблоксу</h2>
+            <p class="shopptext">Стоит - 2999 руб (ТРЕНД!).</p>
+            <p class="shopptext">Рекомендуется: Всем</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:270px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+
+            <h2 class="shoptext"> Учебник SpaceStation 14 </h2>
+            <p class="shopptext">Стоит - 1000 руб.</p>
+            <p class="shopptext">Рекомендуется: Всем</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+
+            <h2 class="shoptext"> Атаномия шайлушая</h2>
+            <p class="shopptext">Стоит - 5999 руб (ТРЕНД!).</p>
+            <p class="shopptext">Рекомендуется: Всем</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+        <div class="shopping" style="width:170px;height:260px;">
+            <img alt="книга" class="imgico" src="book.png" style="width:50px;height:40px;">
+
+            <h2 class="shoptext"> Атаномия шайлушая</h2>
+            <p class="shopptext">Стоит - 5999 руб (ТРЕНД!).</p>
+            <p class="shopptext">Рекомендуется: Всем</p>
+            <button onclick="window.location.href = './book.html'"> КУПИТЬ </button>
+        </div>
+    
+        <footer>
+            <h2 class="footertitle">ЗАКАЖИКНИГУ.РФ</h2>
+            <p class="footertitle"> developers:w1n:cstm, !Vec3d</p>
+            <p class="footertitle"> Made with hands no tilda -_-</p>
+           
+            <div class="main_book_buy">
+                <div class="dropdown_block">
+                    <h5 class="bookselect"> Путеводитель </button>
+                        <div class="dropdown_ctn">
+                            <a href="./book.html">Заказ книги</a>
+                            <a href="./my.html">О компании</a>
+                            <a href="./index.html">Главная страница</a>
+                            <a href="./register.html">Войти</a>
+                        </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+    </header>
+
+
+</body>
+
+</html>
